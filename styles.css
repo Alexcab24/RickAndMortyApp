@@ -1,0 +1,90 @@
+body{
+    background-color:  #242c3b  ;
+    
+}
+.container1{
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(/src/img/fondo.png);
+ background-size: contain;
+ background-repeat: no-repeat;
+ background-position: center center;
+ height: 100vh;
+}
+
+.footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #cad9d7;
+    font-size: 25px;
+    
+}
+.footer a{
+    text-decoration: none;
+}
+
+.tittle h1{
+   
+    font-size: 110px;
+    color:  #cad9d7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 30%;
+   
+}
+
+@media (max-width: 768px) {
+    .tittle h1{
+      font-size: 50px;
+      margin-left: 8%;
+    }
+  }
+
+.cards{
+    justify-content: center;
+    align-items: center;
+    background-color:  #cad9d7;
+    margin: 5%;
+    padding: 5%;
+    border-radius: 20px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+}
+.card{
+    width: 630px;
+}
+.container{
+    display: flex;
+    position: absolute;
+    right: 10%;
+    /* float: right; */
+    width: 30%;
+    
+} 
+
+@media (max-width: 768px) {
+    .container{
+        padding-top: 10px;
+        width: 80%;
+    }
+  }
+
+.inCards{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+.number{
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.buttons{
+    
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
