@@ -1,7 +1,5 @@
 import { useState } from 'react';
-import Button from 'react-bootstrap/Button';
 import Cards from '../../components/Cards';
-import Footer from '../../components/Footer';
 import { useFetch } from '../hooks/useFetch';
 
 export const HomePage = () => {
@@ -43,9 +41,9 @@ const handleInputChange = (event) => {
 ? <Cards/>
 :
 <div className="inCards ">
-{
-  api.map(datos => ( 
-   <div className="card mb-3 m-3 animate__animated animate__fadeIn"  key = {datos.id}>
+{api != null ?
+  api.map((datos) => ( 
+   <div className="card mb-3 m-3 animate__animated animate__fadeIn "  key = {datos.id}>
    <div className="row g-0">
      <div className="col-md-4">
        <img src={datos.image} className="img-fluid rounded-start" alt="..."/>
@@ -63,6 +61,14 @@ const handleInputChange = (event) => {
    </div>
  </div>
   ))
+
+  :
+
+  <h1>Not found</h1>
+
+
+  
+ 
 }
 </div>
 

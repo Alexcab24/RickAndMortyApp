@@ -4,16 +4,30 @@ import { useEffect, useState } from "react"
 export const useFetch = (URL) => {
     const [api, setApi] = useState([]);
 
+
+
+
     useEffect(() => {
     getAPI()
     }, [URL]);
+
+
+
+
+
     
     const getAPI = async() => {
-      await fetch(URL)
-      .then(resp => resp.json())
-      .then(data => setApi(data.results));
+     
+        await fetch(URL)
+        .then(resp => resp.json())
+        .then(data => setApi(data.results))
+        .catch(error => console.log(error));
+     
     }
 
+
+
+    
     return {
         api,
     }

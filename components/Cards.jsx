@@ -1,13 +1,16 @@
 
 import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
 import { useFetch } from '../src/hooks/useFetch';
 
 const Cards = () => {
-    const [counter, setCounter] = useState(1)
 
-    const {api} = useFetch(`https://rickandmortyapi.com/api/character?page=${counter}`)
+    const [counter, setCounter] = useState(1);
+
+    const {api} = useFetch(`https://rickandmortyapi.com/api/character?page=${counter}`);
+
+
+
   return (
   <>
 
@@ -20,7 +23,7 @@ const Cards = () => {
 </div>
        <div className="inCards">
        {
-         api.map(datos => ( 
+         api.map((datos) => ( 
           <div className="card mb-3 m-3 animate__animated animate__fadeIn"  key = {datos.id}>
           <div className="row g-0">
             <div className="col-md-4">
