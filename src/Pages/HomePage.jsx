@@ -24,6 +24,10 @@ const handleInputChange = (event) => {
       </div>
       </div>
    </div>
+
+
+
+   
      <div className="cards">
 
      <div className="container">
@@ -31,16 +35,19 @@ const handleInputChange = (event) => {
     <span className="input-group-text" id="basic-addon1">Seach: </span>
   </div>
   <input type="text" className="form-control" placeholder="Rick Sanchez" aria-label="Username" onChange={handleInputChange} aria-describedby="basic-addon1"/>
-
-  
 </div>
 <br />
 <br />
 <br />
+
+
 {inputValue === ''
-? <Cards/>
+? 
+
+<Cards/>
+
 :
-<div className="inCards ">
+<div className="inCards">
 {api != null ?
   api.map((datos) => ( 
    <div className="card mb-3 m-3 animate__animated animate__fadeIn "  key = {datos.id}>
@@ -55,7 +62,6 @@ const handleInputChange = (event) => {
          <hr />
          <p className="card-text"> <strong>Origin-location: </strong>{datos.origin.name}</p>
          <p className="card-text"> <strong>Last known location: </strong>{datos.location.name}</p>
-       
        </div>
      </div>
    </div>
@@ -65,10 +71,6 @@ const handleInputChange = (event) => {
   :
 
   <h1>Not found</h1>
-
-
-  
- 
 }
 </div>
 

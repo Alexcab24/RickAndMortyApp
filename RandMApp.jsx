@@ -3,8 +3,6 @@ import { HomePage } from './src/Pages'
 
 
 const RandMApp = () => {
-
-
   return (
     <HomePage/>
   )

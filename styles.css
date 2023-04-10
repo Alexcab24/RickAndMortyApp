@@ -59,7 +59,16 @@ body{
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
 }
 .card{
-    width: 600px;
+    display: flex;
+    width: 500px;
+    height: 100%;
+}
+
+
+
+.inCards img{
+   min-height: 100%;
+    width: 100%;
 }
 .container{
     display: flex;
@@ -74,13 +83,26 @@ body{
         padding-top: 10px;
         width: 80%;
     }
+    .inCards{
+    
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: center;
+        /* gap: 15px; */
+       
+    }
   }
 
 .inCards{
     
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    width: 600px;
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: center;
+       
+        /* gap: 15px; */
+      
 }
 .number{
     margin-top: 10px;

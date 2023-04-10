@@ -6,7 +6,6 @@ import { useFetch } from '../src/hooks/useFetch';
 const Cards = () => {
 
     const [counter, setCounter] = useState(1);
-
     const {api} = useFetch(`https://rickandmortyapi.com/api/character?page=${counter}`);
 
 
@@ -21,6 +20,8 @@ const Cards = () => {
   <Button  variant="primary" style = {{margin: '15px'}} onClick = {() => setCounter(counter - 1)} disabled={counter <= 1}> ← Prev</Button>
   <Button variant="primary" style = {{margin: '15px'}} onClick = {() => setCounter(counter + 1)} disabled={counter >= 42}> Next → </Button>
 </div>
+
+
        <div className="inCards">
        {
          api.map((datos) => ( 

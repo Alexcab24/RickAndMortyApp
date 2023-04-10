@@ -22,14 +22,13 @@ export const useFetch = (URL) => {
         .then(resp => resp.json())
         .then(data => setApi(data.results))
         .catch(error => console.log(error));
-     
     }
 
 
 
     
     return {
-        api,
+        api
     }
 }
 
